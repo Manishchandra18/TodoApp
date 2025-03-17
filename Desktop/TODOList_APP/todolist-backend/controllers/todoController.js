@@ -26,7 +26,8 @@ exports.getTodoById = async (req, res) => {
     res.json(todo);
   } catch (error) {
     res.status(500).json({ message: "Error fetching todo" });
-  }
+    console.log(error);
+    }
 };
 
 exports.updateTodo = async (req, res) => {
